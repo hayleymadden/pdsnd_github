@@ -96,17 +96,17 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # Display the most common month
     
     common_month = df['month'].mode()[0]
     print("The most common month for bikeshare travel is", common_month)
     
-    # TO DO: display the most common day of week
+    # Display the most common day of week
     
     common_day = df['day_of_week'].mode()[0]
     print("The most common day of the week for bikeshare travel is", common_day)
 
-    # TO DO: display the most common start hour
+    # Display the most common start hour
     
     common_hour = df['hour'].mode()[0]
     print("The most common hour for bikeshare travel is", common_hour)
@@ -122,15 +122,15 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # Display most commonly used start station
     common_start = df['Start Station'].mode()[0]
     print('The most common start station is ', common_start)
     
-    # TO DO: display most commonly used end station
+    # Display most commonly used end station
     common_end = df['End Station'].mode()[0]
     print('The most common end station is ', common_end)
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # Display most frequent combination of start station and end station trip
     frequent_combo = (df['Start Station'] + ' to ' + df['End Station']).mode()[0]
     print('The most frequently teaveled route is from ', frequent_combo)
     
@@ -146,16 +146,16 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # Display total travel time
     total_travel = df['Trip Duration'].sum()
-    print("The aggregate total travel time in days, hh:mm:ss format is ", str(datetime.timedelta(seconds=int(total_travel))))
+    print("The aggregate total travel time in days, hours:minutes:seconds format is ", str(datetime.timedelta(seconds=int(total_travel))))
     #total_travel = str(datetime.timedelta(seconds=60*60*24+1)) = df['Trip Duration'].sum()
     #seconds_passed = df['Trip Duration'].sum()
     #total_travel = str(datetime.timedelta(seconds=60*60*24+1))
 
-    # TO DO: display mean travel time
+    # Display mean travel time
     avg_time = df['Trip Duration'].mean()
-    print("The average Trip Duration in hh:mm:ss format is ", (datetime.timedelta(seconds=int(avg_time))))
+    print("The average Trip Duration in hours:minutes:secondsgit  format is ", (datetime.timedelta(seconds=int(avg_time))))
 
     print("\nThis operation took %s seconds." % round((time.time() - start_time), 2))
     print('-'*40)
@@ -167,14 +167,14 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     if 'User Type' in df:
         user_types = df['User Type'].value_counts()
         print('The count of each user type is: ', user_types)
     else:   
         print("Sorry, User Type data is not available for the selected city.")
     
-    # TO DO: Display counts of gender
+    # Display counts of gender
     if 'Gender' in df:
         gender_count = df['Gender'].value_counts(dropna=True)
         print('The count of each gender is: ', gender_count)
@@ -182,7 +182,7 @@ def user_stats(df):
         print("Sorry, Gender data is not available for the selected city.")
 
     
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df:
         earliest_birth_year = df['Birth Year'].min()
         recent_birth_year = df['Birth Year'].max()
@@ -197,7 +197,7 @@ def user_stats(df):
     print('-'*40)
 
 def browse(df):
-    """Gives the option to brows raw data for the selected city"""
+    """Gives the option to browse raw data for the selected city"""
     browse = input("\nWould you like to explore the underlying data for this city? Enter y or n\n").lower()
     index_start = 0
     index_stop = 4
