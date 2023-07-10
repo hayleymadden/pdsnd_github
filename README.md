@@ -18,9 +18,10 @@ Navigate to local directory
 Execute program: `$ python bikeshare_final2.py`
 Follow prompts
 
-
 ## Known Bugs
-Raw data for the city of Washington does include data for User Birth Year or User Gender. User receives message acknowledging absent data in lieu of calculated statistic - see lines 182 and 194 of bikeshare_final2.py
+Missing Data: Raw data for the city of Washington does include data for User Birth Year or User Gender. User receives message acknowledging absent data in lieu of calculated statistic - see lines 182 and 194 of bikeshare_final2.py.
+
+No escape: There is no way to exit the program; currently, the user must provide input through the last prompt or exit the command window entirely in order to terminate program.
 ## Collaboration and Further Development
 This program is not currently accepting pull requets as its primary purpose is to demonstrate understanding of concepts covered in Udacity's _Programming for Data Science with Python_ course.  [Click Here](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104) to learn more about the program.
 ## Credits & Resources
@@ -30,4 +31,5 @@ This program is not currently accepting pull requets as its primary purpose is t
 - [dillinger.io](https://dillinger.io) - browser based markdown formatting 
 
 ## Updates and Revisions
+_09-Jul-2023_ Known Bugs: No escape added
 _09-Jul-2023_ Updated Udacity readme template with details of bikeshare_final2.py 
