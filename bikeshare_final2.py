@@ -148,14 +148,14 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel = df['Trip Duration'].sum()
-    print("The aggregate total travel time in days, hh:mm:ss format is ", str(datetime.timedelta(seconds=int(total_travel))))
+    print("The aggregate total travel time in days, hours:minutes:seconds format is ", str(datetime.timedelta(seconds=int(total_travel))))
     #total_travel = str(datetime.timedelta(seconds=60*60*24+1)) = df['Trip Duration'].sum()
     #seconds_passed = df['Trip Duration'].sum()
     #total_travel = str(datetime.timedelta(seconds=60*60*24+1))
 
     # TO DO: display mean travel time
     avg_time = df['Trip Duration'].mean()
-    print("The average Trip Duration in hh:mm:ss format is ", (datetime.timedelta(seconds=int(avg_time))))
+    print("The average Trip Duration in hours:minutes:seconds format is ", (datetime.timedelta(seconds=int(avg_time))))
 
     print("\nThis operation took %s seconds." % round((time.time() - start_time), 2))
     print('-'*40)
